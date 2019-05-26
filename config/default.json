@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb://admin:helloworld1@ds147446.mlab.com:47446/tasktracker",
+    "jwtSecret": "mysecrettoken"
+}

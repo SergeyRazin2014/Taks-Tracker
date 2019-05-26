@@ -1,0 +1,23 @@
+.tasks-filter-container {
+    margin: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.task-filter {
+    padding: 5px;
+    margin-left: 5px;
+}
+
+.task-filter-item {
+    margin-left: 20px;
+    display:inline;
+}
+
+.task-filter-item:first-child {
+    margin-left: 0;
+    display:inline;
+}
+
+.tasks-table-header{
+    color:red;
+}

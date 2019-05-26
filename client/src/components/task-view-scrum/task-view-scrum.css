@@ -1,0 +1,31 @@
+.task-view-scrum-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.task-block{
+    background-color: #3F51B5;
+    width:31%;
+    border-radius: 4px;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    color:whitesmoke;
+}
+
+.task-block h2{
+    margin-left:15px;
+}
+
+.task-block-new {
+
+
+}
+
+.task-block-inwork {
+
+}
+
+.task-block-done {
+
+}
