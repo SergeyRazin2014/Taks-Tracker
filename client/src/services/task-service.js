@@ -8,9 +8,6 @@ class TaskService {
     }
 
     async getTaskById(taskId){
-
-        debugger;
-
         let res = await axios.get(`/task/${taskId}`);
         return res.data;
     }

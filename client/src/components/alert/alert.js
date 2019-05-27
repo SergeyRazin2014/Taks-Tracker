@@ -5,8 +5,6 @@ import SimpleSnackbar from '../snackBar';
 
 const Alert = (props) => {
 
-    debugger;
-
     if (props.alerts !== null && props.alerts.length > 0) {
 
         return props.alerts.map((alert) => (

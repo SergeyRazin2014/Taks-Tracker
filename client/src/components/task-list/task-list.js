@@ -12,6 +12,12 @@ function TaskList(props) {
 
     useEffect(() => {
         props.fetchTasksAction();
+
+        //автообновление задач
+        setInterval(() => {
+            props.fetchTasksAction();
+        }, 1000*60*5);
+
     }, []);
 
     const [tasksViewFilter, setSelectTasksViewFilter] = useState({
@@ -39,7 +45,6 @@ function TaskList(props) {
             return { value: !prevstate.value }
         });
     }
-
 
     const { tasks } = props;
     if (!tasks) {

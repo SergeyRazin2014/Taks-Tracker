@@ -1,4 +1,4 @@
-import { AUTH_USER_SUCCESS, AUTH_USER_FAILURE, FETCH_USER_SUCCESS, FETCH_USER_FAILURE, SET_ALERT } from './types';
+import { AUTH_USER_SUCCESS, AUTH_USER_FAILURE, FETCH_USER_SUCCESS, FETCH_USER_FAILURE } from './types';
 import UserService from '../services/user-service';
 import setAuthToken from '../utils/set-auth-token';
 import { setAlert } from './alert-actions';
@@ -18,8 +18,6 @@ const authUserFailure = () => {
 
 const authAction = (email, password) => async (dispatch) => {
 
-    debugger;
-
     try {
         let token = await new UserService().getToken(email, password);
 
@@ -29,8 +27,8 @@ const authAction = (email, password) => async (dispatch) => {
         dispatch(fetchUser());
     } catch (err) {
         console.log(err);
-        debugger;
         dispatch(setAlert(err.response.data.errors[0].msg));
+        dispatch(authUserFailure());
     }
 
 }

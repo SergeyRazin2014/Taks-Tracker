@@ -49,7 +49,7 @@ const LogIn = (props) => {
                 <Typography component="h1" variant="h5">
                     Sign in
                     </Typography>
-                <form className={classes.form} noValidate onSubmit={e => onSubmit(e)} >
+                <form className={classes.form} onSubmit={e => onSubmit(e)} >
 
                     <TextField
                         variant="outlined"

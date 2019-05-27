@@ -21,6 +21,7 @@ const fethcTasksLoading = () => {
 }
 
 const fetchTasksAction = () => async (dispatch) => {
+
     try {
         dispatch(fethcTasksLoading());
         var tasks = await new TaskService().getTasksForUser();
@@ -28,7 +29,6 @@ const fetchTasksAction = () => async (dispatch) => {
     } catch (err) {
         console.log(err);
         dispatch(fetchTasksFailure());
-        //todo: alert errors
     }
 }
 
